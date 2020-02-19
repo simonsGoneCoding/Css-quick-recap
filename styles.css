@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,8 +13,10 @@ body {
 
 div.nav {
   position: absolute;
-  top: 95px;
-  opacity: 1;
+  margin-top: 3vh;
+  float: left;
+  width: 100%;
+  top: 0px;
   color: white;
 }
 
@@ -23,16 +26,12 @@ div.nav ul {
 }
 
 div.nav ul li {
+  float: left;
   text-align: center;
-  padding-top: 50px;
-  padding-left: 2vw;
+  width: 25%;
   font-size: 1.2em;
   cursor: pointer;
   transition: linear 0.4s;
-}
-
-div.nav ul li:last-child {
-  padding-bottom: 50px;
 }
 
 div.nav ul li:hover {
@@ -66,18 +65,54 @@ div.intro-text {
   text-align: center;
   font-size: 2em;
   color: grey;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 40px 0;
 }
 
 .projects {
   margin: 0px 7vw;
   text-align: center;
 }
+
+.project--first {
+  width: 40%;
+  float: left;
+  margin: 0 5%;
+}
+
+.projects img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0px auto;
+}
+
 .project--first p {
   margin: 6vh 7vw;
   padding: 10px 0 10px 0;
 }
 
-.project--first:first-child {
-  margin-top: 4vh;
+@media (max-width: 700px) {
+  div.nav {
+    margin-top: 0;
+    top: 95px;
+  }
+
+  div.nav ul li {
+    float: none;
+    padding-top: 50px;
+    padding-left: 2vw;
+  }
+
+  div.nav ul li:last-child {
+    padding-bottom: 50px;
+  }
+
+  .project--first {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project--first:first-child {
+    margin-top: 4vh;
+  }
 }

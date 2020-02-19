@@ -11,22 +11,73 @@ body {
 }
 
 div.nav {
-  background-color: cadetblue;
+  position: absolute;
+  top: 95px;
+  opacity: 1;
   color: white;
 }
 
 div.nav ul {
   list-style: none;
+  font-size: 1.2em;
 }
 
 div.nav ul li {
   text-align: center;
-  padding: 16px;
+  padding-top: 50px;
+  padding-left: 2vw;
   font-size: 1.2em;
-  border-bottom: 1px solid black;
-  transition: background-color linear 0.4s;
+  cursor: pointer;
+  transition: linear 0.4s;
+}
+
+div.nav ul li:last-child {
+  padding-bottom: 50px;
 }
 
 div.nav ul li:hover {
+  color: #c25c02;
+  opacity: 0.7;
+}
+
+div.image-area {
+  /* position: absolute; */
+  top: 0;
+  height: 600px;
+  width: 100%;
+  background-image: url("./img/markus-spiske-R4Ls_nFHLsg-unsplash.jpg");
   background-color: black;
+  background-position: center center;
+  background-size: cover;
+  /* padding-top: 300px;
+  padding-bottom: 300px; */
+}
+
+div.image-text {
+  text-align: right;
+  padding-right: 20px;
+  font-size: 0.7em;
+  line-height: 1150px;
+}
+
+div.intro-text {
+  margin: 0px auto;
+  max-width: 1020px;
+  text-align: center;
+  font-size: 2em;
+  color: grey;
+  padding: 20px 0 20px 0;
+}
+
+.projects {
+  margin: 0px 7vw;
+  text-align: center;
+}
+.project--first p {
+  margin: 6vh 7vw;
+  padding: 10px 0 10px 0;
+}
+
+.project--first:first-child {
+  margin-top: 4vh;
 }
